@@ -1,0 +1,7 @@
+{
+  "name": "coba-apps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
