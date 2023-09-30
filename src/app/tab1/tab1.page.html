@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Yen Bijak
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Yen Bijak</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <form [formGroup]="form" >
+      <div>
+        <ion-label>email</ion-label>
+        <ion-input formControlName="email" type="email" class="input" placeholder="Email"></ion-input>
+        
+      </div>
+      <div>
+        <ion-label>Password</ion-label>
+        <ion-input formControlName="password" type="password" class="input" placeholder="username"></ion-input>
+    
+      </div>
+      <ion-button (click)="onLogin()">Login</ion-button>
+    </form>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  </div>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

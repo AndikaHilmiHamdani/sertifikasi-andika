@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Yen Bijak</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Yen Bijak</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button class="ion-margin-top" (click)="addExpense()">
+    <ion-icon name="create-outline"></ion-icon>
+    <ion-label>Add</ion-label>
+  </ion-button>
+
+  <div class="col-md-12 mb-3 ion-margin-top">
+    <ngx-datatable class="material container striped" [rows]="data_expense" [columnMode]="'flex'" [headerHeight]="50"
+      [footerHeight]="50" rowHeight="auto">
+      <ngx-datatable-column name="#" [flexGrow]="0.5">
+        <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+          {{(rowIndex + 1)}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Date" [flexGrow]="2">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.date_expense | titlecase }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Expense" [flexGrow]="2">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row?.expense}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Action" [flexGrow]="2">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <div style="display: flex;">
+            <ion-button (click)="updateExpense()">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+            <ion-button (click)="deleteExpense()">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </ng-template>
+      </ngx-datatable-column>
+
+
+    </ngx-datatable>
+  </div>
+</ion-content>
+
+<ion-toolbar>
+
+  <ion-tabs>
+
+    <ion-tab-bar vertical="bottom" horizontal="end" slot="fixed">
+      <ion-tab-button href="/home-page">
+        <ion-icon aria-hidden="true" name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="detailExpense()">
+        <ion-icon name="card-outline"></ion-icon>
+        <ion-label>Expense</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="detailIncome()">
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-label>Income</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Setting</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</ion-toolbar>

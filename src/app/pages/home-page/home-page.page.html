@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Yen Bijak</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium" style="align-items: center;">Yen Bijak</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="ion-margin-top">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Chart</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <div class="row"class="ion-margin-top" style="display: flex;" >
+          <div class="col-md-6">
+            <canvas id="barCanvas" style="position: relative; height:20vh; width:40vw"></canvas>
+
+          </div>
+          <div class="col-md-6">
+            <canvas id="lineCanvas" style="position: relative; height:20vh; width:40vw"></canvas>
+    
+          </div>
+        </div>
+      </ion-card-content>
+      <ion-card-content>
+        <div class="row" class="ion-margin-top">
+         
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <ion-grid class="ion-margin-top">
+    
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-card (click)="addExpense()">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="add-circle-outline"></ion-icon>
+              Expense
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          </ion-card-content>
+        </ion-card>
+      
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="addIncome()">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="add-circle-outline"></ion-icon>
+              Income
+            </ion-card-title>
+          </ion-card-header>
+        
+          
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-card (click)="detailExpense()">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="alert-circle-outline"></ion-icon>
+              Detail-Expense
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="detailIncome()">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="alert-circle-outline"></ion-icon>
+              Detail-Income
+            </ion-card-title>
+          </ion-card-header>
+        
+        </ion-card>
+      </ion-col>
+      
+    </ion-row>
+
+  </ion-grid>
+  
+  
+</ion-content>
+
+<ion-toolbar>
+
+  <ion-tabs>
+
+    <ion-tab-bar vertical="bottom" horizontal="end" slot="fixed">
+      <ion-tab-button href="/home-page">
+        <ion-icon aria-hidden="true" name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="detailExpense()">
+        <ion-icon name="card-outline"></ion-icon>
+        <ion-label>Expense</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="detailIncome()">
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-label>Income</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Setting</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</ion-toolbar>
