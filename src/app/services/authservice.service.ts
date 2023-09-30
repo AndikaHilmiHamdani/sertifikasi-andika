@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthserviceService {
-  private apiUrl = 'https://4026-182-1-99-110.ngrok-free.app/api'; // Replace with your API URL
+  private apiUrl = 'https://7834-114-125-127-24.ngrok-free.app/api'; // Replace with your API URL
   // private apiUrl = 'http://sertifikasi-andika-backend.pustakasimpana.my.id/api'; // Replace with your API URL
   private authToken: string | null = null;
 

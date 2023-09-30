@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class ServiceService {
 //url
-private _url: string = "https://4026-182-1-99-110.ngrok-free.app/api";
+private _url: string = "https://7834-114-125-127-24.ngrok-free.app/api";
 token:any 
   constructor(private http: HttpClient) { }
 

@@ -69,16 +69,16 @@ export class HomePagePage implements OnInit {
         },
         options: {
           scales: {
-            x: {
-              ticks: {
-                color: 'white',
-              }
-            },
-            y: {
-              ticks: {
-                color: 'white',
-              }
-            }
+            // x: {
+            //   ticks: {
+            //     color: 'white',
+            //   }
+            // },
+            // y: {
+            //   ticks: {
+            //     color: 'white',
+            //   }
+            // }
           }
         }
       })
@@ -119,16 +119,16 @@ export class HomePagePage implements OnInit {
         },
         options: {
           scales: {
-            x: {
-              ticks: {
-                color: 'white',
-              }
-            },
-            y: {
-              ticks: {
-                color: 'white',
-              }
-            }
+            // x: {
+            //   ticks: {
+            //     color: 'white',
+            //   }
+            // },
+            // y: {
+            //   ticks: {
+            //     color: 'white',
+            //   }
+            // }
           }
         }
       })
